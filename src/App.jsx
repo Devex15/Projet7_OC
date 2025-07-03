@@ -6,12 +6,9 @@ function App() {
 
   return (
     <BrowserRouter> 
-      <Header />
-      <main>
         <Routes>
           <Route path={"/"} element={<Home />}/>
         </Routes>
-      </main>
     </BrowserRouter>
 
   )

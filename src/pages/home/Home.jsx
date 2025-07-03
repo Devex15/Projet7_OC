@@ -1,9 +1,19 @@
 import Banner from "../../components/banner/Banner"
+import HomeBanner from "../../assets/image/HomeBanner.png";
+import "./Home.scss"
+import Flats from "../../assets/flat/flats.json";
+import Card from "../../components/card/Card";
 
 function Home() {
-    return(
-        <Banner imgSrc={""} text="Chez vous, partout et ailleurs"/> 
+    console.log(Flats);
+    return (
+        <>
+            <Banner imgSrc={HomeBanner} alt="Forêt et crique" text="Chez vous, partout et ailleurs" /> 
+            {Flats.map((element) => {
+                <Card img={element.cover} title={element.title} />                
+            })}
+        </>
     )
 }
 
-export default Home
+export default Home;

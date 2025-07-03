@@ -1,7 +1,7 @@
-function Banner({imgSrc, text=""}) {
+function Banner({imgSrc, alt, text=""}) {
     return(
         <div>
-            <img src={imgSrc} alt=" "/>
+            <img src={imgSrc} alt={alt}/>
             {text && 
             <p>{text}</p> }
         </div>
