@@ -10,7 +10,14 @@ function Home() {
         <>
             <Banner imgSrc={HomeBanner} alt="Forêt et crique" text="Chez vous, partout et ailleurs" /> 
             {Flats.map((element) => {
-                <Card img={element.cover} title={element.title} />                
+                return (
+                <Card
+                  key={element.id}
+                  id={element.id} 
+                  img={element.cover} 
+                  title={element.title}
+                 /> 
+                )               
             })}
         </>
     )
