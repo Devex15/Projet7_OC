@@ -28,14 +28,15 @@ function Carrousel ({slides}) {
 
             {/*Si longueur est strictement plus grande alors tu fais , sinon tu ne fais rien */}
           {length > 1 && (
-            <p className="left-Arrow" onClick={previousImage}>
-              <i className="fa-solid fa-chevron-left"></i>
-            </p> // 
-          )}
-          {length > 1 && (
-            <p className="right-Arrow" onClick={nextImage}>
-              <i className="fa-solid fa-chevron-right"></i>
-            </p>
+            <>
+                <p className="left-Arrow" onClick={previousImage}>
+                    <i className="fa-solid fa-chevron-left"></i>
+                </p>
+
+                <p className="right-Arrow" onClick={nextImage}>
+                    <i className="fa-solid fa-chevron-right"></i>
+                </p>
+            </>
           )}
 
 
