@@ -40,9 +40,23 @@ function Carrousel ({slides}) {
           )}
 
 
-
-
-
+            {slides.map((image, index) => {
+                return (
+                    <div
+                        key={index}
+                        className={index === current ? "slider active" : "slider"}
+                    >
+                            {index === current && (
+                              <img src={image} alt="img-appartement" className="slide__image" />
+                            )}
+                            {index === current && length > 1 && (
+                                <span className="slider__number">
+                                    {current + 1}/{length}
+                                </span>
+                            )}
+                    </div>
+                        );
+            })}
           </section>
         )
 
