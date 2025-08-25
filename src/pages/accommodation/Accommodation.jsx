@@ -9,7 +9,17 @@ function Flat_Sheet() {
     const {id} = useParams()
     const accommodation= Flats.find(element => element.id === id);
     console.log(accommodation);
-
+    const equipements = accommodation.equipments.map(
+        (Element, index) => {
+          return (
+            <>
+              <p  key={index}>
+                {Element}
+              </p>
+            </>
+          );
+        }
+      );
     return (
         <div className="accomodation">
             
@@ -18,24 +28,24 @@ function Flat_Sheet() {
                 <div>
                     <h1>{accommodation.title}</h1>
                     <h2>{accommodation.location}</h2>
-                 {accommodation.tags.map(function(element) {
-                     return <Tag name={element} />
+                 {accommodation.tags.map(function(element, index) {
+                     return <Tag name={element} key={index}/>
                     })}
                 </div>
 
                 <div>
-                 <Owner />
+                 <Owner host={accommodation.host}/>
                  </div>
             {/* Reste des composants à définir */}
             </section>
 
             <section>
                     <div>
-                        <Collapse title={"Description"} content={accommodation.description}/>
+                        <Collapse title={"Description"} content={<p>{accommodation.description}</p>}/>
                     </div>
 
                     <div>
-                    <Collapse title={"Equipements"} content={accommodation.equipments}/>
+                    <Collapse title={"Equipements"} content={equipements}/>
                     </div>
 
             </section>

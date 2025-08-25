@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import chevron from "../../assets/svg/chevron-down-solid-full.svg";
 
 const Collapse = ({ title, content }) => {
   //On utilise le Hook state afin de définir le collapse ( la petite flèche ouvert - fermé )
@@ -12,18 +13,14 @@ const Collapse = ({ title, content }) => {
    //  Le title est constamment affiché mais la flèche up et down s'affiche au onclick
     <div className="collapse__dropdownDiv">
       <div className="collapse__dropdownTitle">
-        <h2>{title}</h2>
-        <p onClick={display}>
-          {isOpen ? (
-            <i className="fa-solid fa-chevron-up"></i>
-          ) : (
-            <i className="fa-solid fa-chevron-down"></i>
-          )}
-        </p>
+        <h2 onClick={display}>
+          <span>{title}</span>
+          <img src={chevron} alt="chevron" width={20} className={isOpen?"open" : ""}/>  {/* width d'essai à redéfinir */}
+        </h2>
       </div>
       
       <div className="collapse__dropdownContent"> { /* Si setIsOpen est true alors le contenu s'affiche */}
-        {isOpen && <p>{content}</p>}
+        {isOpen && content}
       </div>
     </div>
   );
