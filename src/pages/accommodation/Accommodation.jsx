@@ -4,11 +4,14 @@ import { useParams } from "react-router-dom";
 import Tag from "../../components/InfoFlatSheet/Tag";
 import Owner from "../../components/InfoFlatSheet/owner";
 import Collapse from "../../components/collapse/collapse";
+import NoPageFound from "../error/Error";
 
 function Flat_Sheet() {
     const {id} = useParams()
     const accommodation= Flats.find(element => element.id === id);
-    console.log(accommodation);
+    if (accommodation === undefined ) {
+      return <NoPageFound />
+    } 
     const equipements = accommodation.equipments.map(
         (Element, index) => {
           return (
@@ -24,6 +27,8 @@ function Flat_Sheet() {
         <div className="accomodation">
             
             {/* <Carousel slides={} /> */}
+            <Carousel slides={accommodation.pictures} />
+
             <section>
                 <div>
                     <h1>{accommodation.title}</h1>

@@ -6,8 +6,8 @@ function Header() {
     <header>
       <img src={logo} alt="Logo_Kasa" /> 
       <div>
-        <a href="/"> </a>
-        <a href="/about"> </a>
+        <a href="/"> Accueil </a>
+        <a href="/about"> A Propos </a>
       </div>
     </header>
   );
