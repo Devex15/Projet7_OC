@@ -16,10 +16,8 @@ const PageAbout = () => {
                             <div> 
                                 <Collapse title={about.title} content={about.content}/>
                             </div>
-                        )
-
-                    })
-
+                            )
+                        })
 
                     }
 
