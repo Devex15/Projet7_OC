@@ -1,4 +1,4 @@
-:root {
+/*:root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -65,4 +65,29 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+*/
+
+/* Reset de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styles globaux du body */
+body {
+  margin: 0;
+  font-family: "Montserrat", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: #fff;
+  color: #000;
+  min-height: 100vh;
+  display: block; /* ⚡ important : plus de flex qui centre tout */
+}
+
+/* Conteneur principal */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  background-color: #fff;
 }

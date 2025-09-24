@@ -5,6 +5,8 @@ import Tag from "../../components/InfoFlatSheet/Tag";
 import Owner from "../../components/InfoFlatSheet/owner";
 import Collapse from "../../components/collapse/collapse";
 import NoPageFound from "../error/Error";
+import StarIcon from "../../assets/svg/star-regular-full.svg";
+
 
 function Flat_Sheet() {
     const {id} = useParams()
@@ -41,6 +43,12 @@ function Flat_Sheet() {
                 <div>
                  <Owner host={accommodation.host}/>
                  </div>
+
+                 <div className="rating">
+                    {[1, 2, 3, 4, 5].map((star) => (
+                    <img key={star} src={StarIcon} alt="star" className="star" />
+                    ))}
+                  </div>
             {/* Reste des composants à définir */}
             </section>
 

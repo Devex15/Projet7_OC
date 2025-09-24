@@ -1,20 +1,42 @@
+@use '../../styles/utils/variables' as vars;
+
 header {
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 10px;
+  width: auto;
+  background-color: vars.$tertiary-color;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 
-    img{
-        width: 100px;
-    }
+  @media screen and (max-width:vars.$mobile){
+    width: 10%;
+    
+  }
+  img {
+    width: 29%;
+    padding: 4% 8%;
+  }
 
-    nav{
-        display: flex;
-        flex-wrap: wrap;
-        align-items: space-between;
-        text-decoration: none;
-        color: red;
+  nav {
+    display: flex;
+    gap: 4rem; // espace entre les liens
+    padding-right: 8%;
+
+    a {
+      display: inline-block; // largeur = texte
+      padding: 0;     // padding seulement vertical !
+      text-decoration: none;
+      color: vars.$primary-color;
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.3rem;
+
+      &:hover {
+        color: vars.$primary-color;
+      }
+
+      &.active {
+        border-bottom: 2px solid vars.$primary-color;
+      }
     }
+  }
 }
-

@@ -4,7 +4,7 @@ import Banner from "../../components/banner/Banner";
 import AboutData from "../../assets/about/about.json";
 
 const PageAbout = () => {
-    console.log(AboutData);
+    //console.log(AboutData);
     return(
         <>
             <div className="PageAbout">
@@ -13,7 +13,7 @@ const PageAbout = () => {
                 <section className="AboutContainer">
                     {AboutData.map((about) => {
                         return (
-                            <div> 
+                            <div key={about.id}> 
                                 <Collapse title={about.title} content={about.content}/>
                             </div>
                             )
