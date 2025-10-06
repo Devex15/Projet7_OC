@@ -1,0 +1,42 @@
+@use "../../styles/utils/variables" as vars;
+
+.collapse__dropdownDiv {
+  margin: 1rem auto;
+  border-radius: 0.5rem;
+  overflow: hidden;
+
+}
+
+/* --- HEADER / TITLE --- */
+.collapse__dropdownTitle {
+  background-color: vars.$primary-color;   // fond rouge
+  color: white;                            // texte blanc
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+
+  h2 {
+    display: flex;
+    justify-content: space-between;  // texte à gauche, chevron à droite
+    align-items: center;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+
+    img {
+      transition: transform 0.3s ease; // animation fluide
+        &.open {
+        transform: rotate(180deg);       // rotation quand isOpen = true
+      }
+    }
+
+  }
+}
+
+/* --- CONTENT --- */
+.collapse__dropdownContent {
+  background-color: vars.$secondary-color;  // fond gris clair
+  color: vars.$primary-color;               // texte rouge
+  padding: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}

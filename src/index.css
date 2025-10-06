@@ -85,6 +85,10 @@ body {
   display: block; /* ⚡ important : plus de flex qui centre tout */
 }
 
+main {
+  min-height: 80vh;
+}
+
 /* Conteneur principal */
 #root {
   max-width: 1280px;

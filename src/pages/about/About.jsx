@@ -1,7 +1,8 @@
 import PageAboutBanner from "../../assets/image/PageAboutBanner.png";
-import Collapse from "../../components/collapse/collapse";
+import Collapse from "../../components/collapse/Collapse"
 import Banner from "../../components/banner/Banner";
 import AboutData from "../../assets/about/about.json";
+import "./About.scss";
 
 const PageAbout = () => {
     //console.log(AboutData);

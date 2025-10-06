@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import chevron from "../../assets/svg/chevron-down-solid-full.svg";
+import "./Collapse.scss";
 
 const Collapse = ({ title, content }) => {
   //On utilise le Hook state afin de définir le collapse ( la petite flèche ouvert - fermé )
@@ -18,10 +19,11 @@ const Collapse = ({ title, content }) => {
           <img src={chevron} alt="chevron" width={20} className={isOpen?"open" : ""}/>  {/* width d'essai à redéfinir */}
         </h2>
       </div>
-      
-      <div className="collapse__dropdownContent"> { /* Si setIsOpen est true alors le contenu s'affiche */}
-        {isOpen && content}
-      </div>
+      {isOpen &&
+      (<div className="collapse__dropdownContent"> { /* Si setIsOpen est true alors le contenu s'affiche */}
+        {content}
+      </div>)
+      }
     </div>
   );
 };
