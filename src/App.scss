@@ -1,8 +1,10 @@
+@use "./styles/utils/variables" as vars; 
+ 
  #root {
   max-width: 1280px;
   margin: 0 auto;
   text-align: center;
-  background-color: white;
+  background-color: vars.$tertiary-color; // Bcakground-color en blanc 
 }
 
 /*.logo {

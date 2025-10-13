@@ -10,7 +10,7 @@
 /* --- HEADER / TITLE --- */
 .collapse__dropdownTitle {
   background-color: vars.$primary-color;   // fond rouge
-  color: white;                            // texte blanc
+  color: vars.$tertiary-color; // texte blanc
   padding: 0.8rem 1rem;
   cursor: pointer;
 
