@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styles from "./carrousel.module.scss"
 
 function Carrousel ({slides}) {
     //L'index du 1er slide est défini  à 0 .
@@ -24,7 +25,7 @@ function Carrousel ({slides}) {
 
 
       return (
-        <section className="slide">
+        <section className={styles.slide}>
 
             {/*Si longueur est strictement plus grande alors tu fais , sinon tu ne fais rien */}
           {length > 1 && (
@@ -47,7 +48,7 @@ function Carrousel ({slides}) {
                         className={index === current ? "slider active" : "slider"}
                     >
                             {index === current && (
-                              <img src={image} alt="img-appartement" className="slide__image" />
+                              <img src={image} alt="img-appartement" className={styles.slide__image} />
                             )}
                             {index === current && length > 1 && (
                                 <span className="slider__number">

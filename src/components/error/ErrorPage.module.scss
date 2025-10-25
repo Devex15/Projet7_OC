@@ -1,0 +1,25 @@
+@use "../../styles/utils/variables" as vars;
+
+.errorDiv{
+
+    min-height: 80%;
+    font-family: "Montserrat", sans-serif;
+    color: vars.$primary-color;
+    
+    &__Number{
+        font-size: 16vw;  // Taille = 16% de la largeur de la fenêtre 
+        font-weight: 700;
+        padding-top: 5vh;
+    }
+
+    &__Text{
+        font-size: 2vw;
+        padding-bottom: 20vh;
+    }
+
+    &__Link{
+        font-size: 1.5vw;
+    }
+
+}
+

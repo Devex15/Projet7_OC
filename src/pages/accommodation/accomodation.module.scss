@@ -1,0 +1,88 @@
+@use "../../styles/utils/variables" as vars;
+
+.infoSection {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 8%;
+}
+  
+  /* Ligne principale : gauche = infos, droite = owner + rating */
+.infoTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Pour gérer les écrans étroits */
+    gap: 1.5rem;
+}
+  
+  /* Bloc gauche : titres + tags */
+  .leftInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding-left: 0;
+    margin-left: 0;
+    text-align: left;
+  
+    h1 {
+      font-size: 1.8rem;
+      margin: 0;
+      color: vars.$primary-color;
+      font-style: "Montserrat", sans-serif;
+    }
+  
+    h2 {
+      font-size: 1.2rem;
+      margin: 0;
+      margin-block-start: 0;     /* réinitialise margin-top logique */
+      margin-block-end: 0;       /* réinitialise margin-bottom logique */
+      margin-inline-start: 0;    /* réinitialise margin-left logique */
+      margin-inline-end: 0;      /* réinitialise margin-right logique */
+      font-weight: 400;
+      color: vars.$primary-color;
+      font-style: "Montserrat", sans-serif;
+    }
+}
+  
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  /* Bloc droite : owner au-dessus, rating dessous */
+  .rightInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Aligne tout à droite */
+    gap: 0.8rem;
+    color: vars.$primary-color;
+  }
+  
+  /* Les étoiles */
+  .rating {
+    display: flex;
+    gap: 0.4rem;
+  }
+
+  
+  .star {
+    width: 20px;
+    height: 20px;
+  }
+  
+.collapses{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.collapse__dropdownDiv{
+    width: 100%;
+
+    @media screen and (min-width: 576px) {
+        width: 45%;
+        
+    }
+}

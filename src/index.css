@@ -78,11 +78,12 @@ button:focus-visible {
 /* Styles globaux du body */
 body {
   margin: 0;
+  padding: 0;
   font-family: "Montserrat", system-ui, Avenir, Helvetica, Arial, sans-serif;
   background-color: #fff;
   color: #000;
   min-height: 100vh;
-  display: block; /* ⚡ important : plus de flex qui centre tout */
+  display: block; /* important : plus de flex qui centre tout */
 }
 
 main {

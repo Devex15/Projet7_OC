@@ -1,0 +1,16 @@
+@use "../../styles/utils/variables" as vars;
+
+
+.tag-div{
+    background-color: vars.$primary-color;
+    border-radius: 2rem;
+    padding: 0 0;
+
+}
+
+.tag-div__button{
+    color: vars.$tertiary-color;
+    font-family: "Montserrat", sans-serif;
+    padding: 0.2rem 2rem;
+    display: inline-block;
+  }

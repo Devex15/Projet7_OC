@@ -1,0 +1,23 @@
+@use "../../styles/utils/variables" as vars;
+
+
+.owner {
+    display: flex;
+    align-items: center;   /* Aligne verticalement */
+    justify-content: flex-end; /* Aligne le tout à droite (facultatif) */
+    gap: 0.8rem;           /* Espace entre nom et photo */
+  }
+  
+  .name {
+    font-weight: 500;
+    font-size: 1rem;
+    color: vars.$primary-color;
+  }
+  
+  .picture {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  

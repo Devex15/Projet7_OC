@@ -1,0 +1,14 @@
+.slide {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 0 8%; /*  espace de 2% à droite et à gauche */
+  
+    .slide__image {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      display: block;
+    }
+  }
+  
