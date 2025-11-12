@@ -1,42 +1,62 @@
 @use "../../styles/utils/variables" as vars;
 
+/* --- CONTAINER PRINCIPAL DU COLLAPSE --- */
 .collapse__dropdownDiv {
   margin: 1rem auto;
   border-radius: 0.5rem;
   overflow: hidden;
+  background-color: vars.$secondary-color; // pour bien voir les blocs
+  flex: 1; // permet au collapse de s'adapter dans un conteneur flex
+  margin-bottom: 2rem;
 
+  @media screen and (max-width:426px){
+    margin-bottom: 1rem;
+  }
 }
 
 /* --- HEADER / TITLE --- */
 .collapse__dropdownTitle {
   background-color: vars.$primary-color;   // fond rouge
-  color: vars.$tertiary-color; // texte blanc
+  color: vars.$tertiary-color;             // texte blanc
   padding: 0.8rem 1rem;
   cursor: pointer;
 
+    @media screen and (max-width:426px){
+      padding: 0.5rem 0.9rem;
+    }
+
   h2 {
     display: flex;
-    justify-content: space-between;  // texte à gauche, chevron à droite
+    justify-content: space-between;        // texte à gauche, chevron à droite
     align-items: center;
     margin: 0;
     font-size: 1rem;
     font-weight: bold;
 
-    img {
-      transition: transform 0.3s ease; // animation fluide
-        &.open {
-        transform: rotate(180deg);       // rotation quand isOpen = true
-      }
+    @media screen and (max-width:426px){
+        font-size: 0.8rem;
+        font-weight: lighter;
     }
 
+
+    img {
+      transition: transform 0.3s ease;     // animation fluide
+      &.open {
+        transform: rotate(180deg);         // rotation quand isOpen = true
+      }
+    }
   }
 }
 
 /* --- CONTENT --- */
 .collapse__dropdownContent {
-  background-color: vars.$secondary-color;  // fond gris clair
-  color: vars.$primary-color;               // texte rouge
+  background-color: vars.$secondary-color; // fond gris clair
+  color: vars.$primary-color;              // texte rouge
   padding: 1rem;
   font-size: 0.95rem;
   line-height: 1.4;
+
+  @media screen and (max-width:426px){
+    font-size: 0.7rem;
+}
 }

@@ -66,23 +66,62 @@
     gap: 0.4rem;
   }
 
-  
   .star {
     width: 20px;
     height: 20px;
   }
   
-.collapses{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  .starFull,
+  .starEmpty {
+    width: 25px;
+    height: 25px;
+    margin-right: 4px;
+    display: inline-block;
+  }
+  
+
+ /* .starFull {
+  filter: brightness(0) saturate(100%) invert(27%) sepia(91%)
+    saturate(4795%) hue-rotate(340deg) brightness(105%) contrast(102%);
 }
 
-.collapse__dropdownDiv{
-    width: 100%;
+.starEmpty {
+  opacity: 0.3;
+  filter: brightness(0) saturate(100%);
+} */
 
-    @media screen and (min-width: 576px) {
-        width: 45%;
-        
+
+.starFull {
+  color: vars.$primary-color; // ta couleur rosée
+  fill: currentColor; // pour s'assurer que le SVG se colore bien
+}
+
+.starEmpty {
+  color: vars.$tertiary-color; // noir ou gris selon ta palette
+  opacity: 0.3;
+  fill: currentColor;
+}
+
+/* le collapse est déplacé dans le accomodation : Sinon il ne pourrait pas
+ s'appliquer à cause du scope et du module.scss */
+
+    .collapses {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 4rem;
+    
+      .collapse__dropdownDiv {
+        flex: 1;
+      }
+    
+      @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 1rem;
+    
+        .collapse__dropdownDiv {
+          width: 100%;
+        }
+      }
     }
-}
+    

@@ -12,6 +12,11 @@ footer {
       filter: brightness(0) saturate(100%) invert(100%); // met la couleur en noire - conserve les contrastes - inverse la couleur
       width: 9%; // ajuste la taille si nécessaire
       margin: 1.5rem 0 2rem 0; // espace entre le logo et le texte
+
+      @media screen and (max-width:426px){
+          width: 38%;
+          margin: 1rem 2rem;
+      }
     }
   
     p {
@@ -20,5 +25,10 @@ footer {
       font-size: 1rem;
       margin: 0;
       text-align: center;
+
+      @media screen and (max-width:426px){
+        font-size: 0.8rem;
+        margin: 0.5rem;
+      }
     }
   }

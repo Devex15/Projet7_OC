@@ -9,18 +9,31 @@ header {
   align-items: center;
 
   @media screen and (max-width:vars.$mobile){
-    width: 10%;
-    
+    width: auto;
+    flex-wrap:nowrap; //écrase la propriété wrap , sans refaire le flex . 
+    flex-direction: row; // permet de garder le space between fonctionnel en media query
+    justify-content: space-between;
   }
+
   img {
     width: 29%;
     padding: 4% 8%;
+
+    @media screen and (max-width:vars.$mobile){
+      width: 36%;
+      padding: 3% 4%;
+    }
   }
 
   nav {
     display: flex;
     gap: 4rem; // espace entre les liens
     padding-right: 8%;
+
+    @media screen and (max-width:426px){
+      gap:1.5rem; // max-width à revoir
+      padding-right: 6%;
+    }
 
     a {
       display: inline-block; // largeur = texte
@@ -36,6 +49,11 @@ header {
 
       &.active {
         border-bottom: 2px solid vars.$primary-color;
+      }
+
+      @media screen and (max-width:426px){
+        font-size: 0.7rem; // max-width à revoir
+        text-transform: uppercase; // transforme le texte en petits caratères en un texte en gros caractères
       }
     }
   }
