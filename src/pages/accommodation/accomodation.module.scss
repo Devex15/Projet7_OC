@@ -30,6 +30,11 @@
       margin: 0;
       color: vars.$primary-color;
       font-style: "Montserrat", sans-serif;
+
+      @media(max-width:vars.$mobile){
+        font-weight: 500;
+        font-size: 1.3rem;
+      }
     }
   
     h2 {
@@ -42,6 +47,11 @@
       font-weight: 400;
       color: vars.$primary-color;
       font-style: "Montserrat", sans-serif;
+
+      @media(max-width:vars.$mobile){
+        font-weight: 500;
+        font-size: 0.9rem;
+      }
     }
 }
   
@@ -79,17 +89,6 @@
     display: inline-block;
   }
   
-
- /* .starFull {
-  filter: brightness(0) saturate(100%) invert(27%) sepia(91%)
-    saturate(4795%) hue-rotate(340deg) brightness(105%) contrast(102%);
-}
-
-.starEmpty {
-  opacity: 0.3;
-  filter: brightness(0) saturate(100%);
-} */
-
 
 .starFull {
   color: vars.$primary-color; // ta couleur rosée

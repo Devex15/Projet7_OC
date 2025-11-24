@@ -3,14 +3,29 @@
 
 .tag-div{
     background-color: vars.$primary-color;
-    border-radius: 2rem;
-    padding: 0 0;
+    border-radius: 0.5rem;
+    padding: 0;
 
-}
+    @media (max-width: vars.$mobile){
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        width: 28%;
+        
+    }
+
+    }
+
 
 .tag-div__button{
     color: vars.$tertiary-color;
     font-family: "Montserrat", sans-serif;
     padding: 0.2rem 2rem;
     display: inline-block;
+
+    @media(max-width:vars.$mobile){
+        font-size: 0.7rem;
+        text-align: center;
+    }
   }

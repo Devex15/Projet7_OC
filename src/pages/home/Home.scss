@@ -30,7 +30,7 @@
         position: absolute;     //sort du flux normal
         bottom: 1rem;           // collé en bas de l’image
         left: 1rem;             // petit décalage à gauche
-        color: white;           // texte visible sur l’image
+        color: vars.$tertiary-color;           // texte visible sur l’image
         font-size: 0.9rem;
         text-shadow: 1px 1px 4px rgba(0,0,0,0.7); // lisibilité du texte
         max-width: 60%;     // limite la largeur → le texte se casse sur 2 lignes si besoin
@@ -60,3 +60,25 @@
     }
   }
   
+
+@media (max-width: vars.$mobile) {
+#flat-list {
+    flex-direction: column;   //  Met les divs en colonne
+    flex-wrap: nowrap;        // pas besoin d’enroulement en colonne
+    justify-content: center; 
+    align-items: center;      // centre les colonnes horizontalement
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    gap: 0;
+
+
+    a{
+      width: 100%;
+    }
+    
+  }
+
+  // _tag.div{width: 30%) : voir media query sur le composant tag 
+
+}
